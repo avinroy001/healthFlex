@@ -59,10 +59,13 @@ No backend is used — all data is stored locally.
 Icons are taken from react-icons (specifically Font Awesome).
 React state is used for managing UI logic , and localStorage handles persistent storage.
 All components are client-side rendered — no SSR or API calls.
- 🛠️ Optional Enhancements (Future Ideas)
+
+Optional Enhancements (Future Ideas)
 
 Export timer history as JSON
 Add sound notifications on completion
 Support dark/light mode toggle
-Filter timers by category
 Track timer history and display it in a separate screen
+Export Timer Data – Allow users to export timer history as a JSON file 
+Custom Themes – Add support for light and dark modes with a theme switcher 
+Category Filtering – Add a dropdown to filter timers by category 
