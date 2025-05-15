@@ -1,0 +1,104 @@
+.timer-list {
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+}
+
+.category-section {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.category-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.bulk-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bulk-actions button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bulk-actions button:hover {
+  background-color: #0056b3;
+}
+
+.timer-items {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.timer-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.timer-item:last-child {
+  border-bottom: none;
+}
+
+.timer-name {
+  flex: 2;
+  font-weight: bold;
+  color: #444;
+}
+
+.timer-time {
+  flex: 1;
+  text-align: center;
+  color: #666;
+}
+
+.timer-status {
+  flex: 1;
+  text-align: right;
+  padding-left: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.9rem;
+}
+
+.status-running {
+  background-color: #e6ffe6;
+  color: #006600;
+}
+
+.status-paused {
+  background-color: #fff2cc;
+  color: #996600;
+}
+
+.status-completed {
+  background-color: #f2dede;
+  color: #a94442;
+}

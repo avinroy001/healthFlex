@@ -1,0 +1,155 @@
+.timer-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  position: relative;
+}
+
+.timer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer-name {
+  flex: 2;
+  font-weight: bold;
+  color: #333;
+}
+
+.timer-time {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.timer-status {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.status-running {
+  background-color: #e6ffe6;
+  color: #006600;
+}
+
+.status-paused {
+  background-color: #fff2cc;
+  color: #996600;
+}
+
+.status-completed {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 300px; /* or auto or 100% */
+  margin: 10px 0;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+   border: 1px solid red;
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+.timer-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.timer-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.timer-controls button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.clock-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.clock-display {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.digital-clock {
+  font-size: 3rem;
+  margin: 20px 0;
+  font-family: monospace;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  z-index: 1001;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-close {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: #0056b3;
+}

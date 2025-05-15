@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import  "./AddTimer.css";
+import "./AddTimer.css";
 
-const AddTimer = ({ onClose }) => {
+const AddTimer = ({ onClose, onSave }) => {
   const [formData, setFormData] = useState({
     name: '',
     duration: '',
@@ -15,8 +15,27 @@ const AddTimer = ({ onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    onClose(); 
+
+    const { name, duration, category } = formData;
+
+    if (!name || !duration || !category) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    const id = Date.now(); 
+
+    const newTimer = {
+      id,
+      name,
+      duration: parseInt(duration),
+      remaining: parseInt(duration),
+      category,
+      status: 'Paused',
+    };
+
+    onSave(newTimer); 
+    onClose();
   };
 
   return (
@@ -35,13 +54,14 @@ const AddTimer = ({ onClose }) => {
             />
           </div>
           <div>
-            <label>Duration (in minutes):</label><br />
+            <label>Duration (in seconds):</label><br />
             <input
               type="number"
               name="duration"
               value={formData.duration}
               onChange={handleChange}
               required
+              min="1"
             />
           </div>
           <div>
@@ -72,4 +92,3 @@ const AddTimer = ({ onClose }) => {
 };
 
 export default AddTimer;
-
