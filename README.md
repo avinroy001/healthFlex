@@ -29,21 +29,33 @@ Start the development server :
 npm start
 The app will open at http://localhost:3000
 
-📁 Project Structure
+Project structure
 
 react-timer-app/
 ├── public/
+│   ├── index.html
+│   ├── logo.svg
+│   └── ...
 ├── src/
 │   ├── components/
-│   │   ├── AddTimer.js
-│   │   ├── TimerItem.js
-│   │   ├── TimerList.js
-│   │   └── ...
+│   │   ├── category/
+│   │   │   ├── HistoryScreen.css
+│   │   │   └── HistoryScreen.jsx
+│   │   ├── timer/
+│   │   │   ├── AddTimer.css
+│   │   │   ├── AddTimer.jsx
+│   │   │   ├── Timer.css
+│   │   │   └── Timer.jsx
+│   │   ├── timerList/
+│   │   │   ├── TimerList.css
+│   │   │   └── TimerList.jsx
+│   │   └── timeItem/
+│   │       ├── TimerItem.css
+│   │       └── TimerItem.jsx
 │   ├── App.js
 │   ├── index.js
 │   └── styles/
-│       ├── Timer.css
-│       ├── TimerItem.css
+│       ├── global.css
 │       └── ...
 ├── README.md
 └── package.json

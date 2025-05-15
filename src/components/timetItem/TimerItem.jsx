@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import { FaPlay, FaPause, FaUndo } from "react-icons/fa";
 import "./TimerItem.css";
 
@@ -7,6 +7,21 @@ const TimerItem = ({ timer, onStart, onPause, onReset, onUpdate }) => {
   const [status, setStatus] = useState(timer.status);
   const [intervalId, setIntervalId] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [hasAlerted, setHasAlerted] = useState(false);
+
+  useEffect(() => {
+  if (
+    status === "Running" &&                    
+    !hasAlerted &&                             
+    timer.duration > 0 &&                      
+    remaining <= timer.duration / 2 &&         
+    remaining > 0                              
+  ) {
+    alert(`Timer "${timer.name}" is 50% done!`);
+    setHasAlerted(true);
+  }
+}, [remaining, status, hasAlerted, timer]);
+
 
   useEffect(() => {
     setRemaining(timer.remaining);
@@ -61,8 +76,10 @@ const TimerItem = ({ timer, onStart, onPause, onReset, onUpdate }) => {
 
   const handleReset = () => {
     setRemaining(timer.duration);
-    setStatus("Paused");
+    setStatus("Reset");
     onReset(timer.id);
+    setHasAlerted(false);
+
     if (intervalId) clearInterval(intervalId);
   };
 

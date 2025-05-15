@@ -6,10 +6,36 @@
 
 .page-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.add-timer-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.add-timer-button:hover {
+  background-color: #0056b3;
+}
+
 .page-header h1 svg {
   color: #007bff; 
   vertical-align: middle;
@@ -22,21 +48,6 @@
   color: #333;
 }
 
-.add-timer-button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.add-timer-button:hover {
-  background-color: #0056b3;
-}
 .add-timer-button svg {
   margin-right: 0.5rem; 
   vertical-align: middle; 
